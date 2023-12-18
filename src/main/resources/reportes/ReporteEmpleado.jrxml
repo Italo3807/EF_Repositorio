@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.6.final using JasperReports Library version 6.20.6-5c96b6aa8a39ac1dc6b6bea4b81168e16dd39231  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReporteEmpleado" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="1a4bb8bc-9c7a-4b32-9554-f5548b0e99b3">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT id,
+	fecha_ingreso,
+	nombre,
+	salario,
+	departamento_id
+FROM springboot.tbl_empleados]]>
+	</queryString>
+	<field name="id" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.name" value="id"/>
+		<property name="com.jaspersoft.studio.field.label" value="id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tbl_empleados"/>
+	</field>
+	<field name="fecha_ingreso" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.name" value="fecha_ingreso"/>
+		<property name="com.jaspersoft.studio.field.label" value="fecha_ingreso"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tbl_empleados"/>
+	</field>
+	<field name="nombre" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="nombre"/>
+		<property name="com.jaspersoft.studio.field.label" value="nombre"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tbl_empleados"/>
+	</field>
+	<field name="salario" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="salario"/>
+		<property name="com.jaspersoft.studio.field.label" value="salario"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tbl_empleados"/>
+	</field>
+	<field name="departamento_id" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.name" value="departamento_id"/>
+		<property name="com.jaspersoft.studio.field.label" value="departamento_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tbl_empleados"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="10" y="15" width="50" height="30" uuid="0e5b7616-170f-48ed-8a05-8c991c811607">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="53e2336c-4edb-43f0-9ffb-7aa3543d7e9d"/>
+				</reportElement>
+				<text><![CDATA[id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="90" y="15" width="100" height="30" uuid="f611eed8-7fb5-43f6-b672-cd899d5ca824">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="69c482fc-13ba-4893-a6ba-babbc2b91f95"/>
+				</reportElement>
+				<text><![CDATA[fecha_ingreso]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="210" y="15" width="100" height="30" uuid="266a9cc4-e414-4328-be17-4e53bcefb30a">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="7d20c781-f9ce-4623-82fc-0e168951b88a"/>
+				</reportElement>
+				<text><![CDATA[nombre]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="330" y="15" width="100" height="30" uuid="4a93508a-2220-4376-b727-022840de6cdd">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="0c7d8112-0a71-4cd2-b964-9ac3d08c9157"/>
+				</reportElement>
+				<text><![CDATA[salario]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="443" y="15" width="100" height="30" uuid="3c5a0d20-b4e1-4dbc-83d7-55b530b26c94">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="d3b313ec-1cff-46cb-9b78-251816190df0"/>
+				</reportElement>
+				<text><![CDATA[departamento_id]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="10" y="40" width="50" height="30" uuid="8711ae1d-8253-4ab0-8c85-12ecf549fa99">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="53e2336c-4edb-43f0-9ffb-7aa3543d7e9d"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="90" y="40" width="100" height="30" uuid="026bae15-7931-41a5-8332-fa6678cc3acb">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="69c482fc-13ba-4893-a6ba-babbc2b91f95"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{fecha_ingreso}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="210" y="40" width="100" height="30" uuid="f5a51341-0d56-4309-acea-0d725720eb40">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="7d20c781-f9ce-4623-82fc-0e168951b88a"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{nombre}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="330" y="40" width="100" height="30" uuid="66227ccd-cb08-4dac-a2a3-b12d60a280f3">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="0c7d8112-0a71-4cd2-b964-9ac3d08c9157"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{salario}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="443" y="40" width="100" height="30" uuid="198b4dda-fcb3-4a1f-9749-579576fedab4">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="d3b313ec-1cff-46cb-9b78-251816190df0"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{departamento_id}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
